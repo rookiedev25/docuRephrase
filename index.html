@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StyleCheck AI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>StyleCheck AI</h1>
+        <p>AI-powered CPS Style Guide assistant</p>
+    </header>
+
+    <main>
+        <!-- <section class="upload-section">
+            <label for="fileInput" class="upload-box">
+                <span>📄 Drag & Drop or Click to Upload your StyleGuide</span>
+                <p>Supported: .docx, .pdf, .html</p>
+                <input type="file" id="fileInput" hidden />
+            </label>
+        </section> -->
+
+        <section class="upload-section">
+            <label for="fileInput" class="upload-box">
+                <span>📄 Drag & Drop or Click to Upload your Tech-Doc</span>
+                <p>Supported: .docx, .pdf, .html</p>
+                <input type="file" id="fileInput" hidden />
+            </label>
+        </section>
+
+        <!-- Tone Selector Section -->
+        <div class="tone-selector">
+            <label for="tone">Select the Tone of the Document:</label>
+            <select id="tone">
+                <option value="formal">Formal</option>
+                <option value="friendly">Friendly</option>
+                <option value="concise">Concise</option>
+                <option value="technical">Technical</option>
+                <option value="engaging">Engaging</option>
+            </select>
+            <button class="submitTone">Submit</button>
+        </div>
+  
+
+        <section class="preview-section">
+            <div class="text-panel">
+                <h2>Extracted Text</h2>
+                <textarea placeholder="Uploaded file content will appear here..." disabled></textarea>
+            </div>
+            <div class="text-panel">
+                <h2>AI Suggestions</h2>
+                <textarea placeholder="Corrected text and feedback will appear here..." disabled></textarea>
+            </div>
+        </section>
+
+        <section class="actions">
+            <button disabled>🔍 Analyze with AI</button>
+            <button disabled>⬇️ Download Corrected Version</button>
+            <button>♻️ Clear</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with love for TechWriters · &copy; 2025 <a href="https://github.com/rookiedev25">rookiedev25</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

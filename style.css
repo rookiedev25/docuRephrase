@@ -1,0 +1,174 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --primary: #007aff;
+  --gray: #f2f2f2;
+  --font: "Inter", sans-serif;
+  --success: #28a745;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  padding: 2rem;
+  line-height: 1.5;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.upload-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.upload-box {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-box:hover {
+  border-color: var(--primary);
+  background: var(--gray);
+}
+
+.preview-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.text-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-panel h2 {
+  margin-bottom: 0.5rem;
+}
+
+.text-panel textarea {
+  resize: vertical;
+  min-height: 200px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actions button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.actions button:hover:not(:disabled) {
+  background: #005bb5;
+}
+
+.tone-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.tone-selector label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tone-selector select {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+    border: solid 1px var(--primary);
+    border-radius: 8px;
+  background: #f9f9f9;
+}
+.tone-selector select:focus {
+  border-color: var(--primary);
+}
+.tone-selector select:hover {
+    border: 1.5px solid var(--primary);
+    cursor: pointer;
+}
+.submitTone{
+    background-color: var(--primary);
+    color: var(--bg);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;;
+}
+.submitTone:hover {
+    background-color: #005bb5;
+}
+
+
+footer {
+  background-color: var(--primary);
+  color: var(--gray);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--bg);
+  text-decoration: none;
+}
+footer a:hover {
+  font-style: bold;
+
+}
