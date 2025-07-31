@@ -10,20 +10,28 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <h1>StyleCheck AI</h1>
         <p>AI-powered CPS Style Guide assistant</p>
-    </header>
+    </header> -->
+    <nav>
+        <div class="nav-content">
+            <div class="leftDiv">
+                <span>docu</span>
+                <p>Rephrase</p>
+            </div>
 
-    <main>
-        <!-- <section class="upload-section">
-            <label for="fileInput" class="upload-box">
-                <span>📄 Drag & Drop or Click to Upload your StyleGuide</span>
-                <p>Supported: .docx, .pdf, .html</p>
-                <input type="file" id="fileInput" hidden />
-            </label>
-        </section> -->
+            <div class="rightDiv">
+                <label class="theme-switch">
+                    <input type="checkbox" id="themeToggle" />
+                    <span class="slider"></span>
+                </label>
+                <a href="https://github.com/rookiedev25">GitHub</a>
+                </div>
+                </div>
+                </nav>
 
+<main>
         <section class="upload-section">
             <label for="fileInput" class="upload-box">
                 <span>📄 Drag & Drop or Click to Upload your Tech-Doc</span>
@@ -34,26 +42,56 @@
 
         <!-- Tone Selector Section -->
         <div class="tone-selector">
-            <label for="tone">Select the Tone of the Document:</label>
-            <select id="tone">
-                <option value="formal">Formal</option>
-                <option value="friendly">Friendly</option>
-                <option value="concise">Concise</option>
-                <option value="technical">Technical</option>
-                <option value="engaging">Engaging</option>
-            </select>
+            <div class="chooseTone">
+                <label for="tone">Select the Tone of the Document:</label>
+                <select id="tone">
+                    <option value="formal">Formal</option>
+                    <option value="friendly">Friendly</option>
+                    <option value="concise">Concise</option>
+                    <option value="technical">Technical</option>
+                    <option value="engaging">Engaging</option>
+                </select>
+            </div>
+            
             <button class="submitTone">Submit</button>
         </div>
   
 
         <section class="preview-section">
             <div class="text-panel">
-                <h2>Extracted Text</h2>
-                <textarea placeholder="Uploaded file content will appear here..." disabled></textarea>
-            </div>
+                <div class="panel-header">
+                    <h2>📝 Extracted Text</h2>
+                    <div class="panel-info">
+                        <span class="word-count">0 words</span>
+                    </div>
+                </div>
+                <div class="textarea-container">
+                    <textarea id="extractedText" placeholder="Your uploaded document content will appear here..." disabled></textarea>
+                    <div class="textarea-overlay">
+                        <div class="upload-prompt">
+                            <div class="upload-icon">📄</div>
+                            <p>Upload a document to see extracted content</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
             <div class="text-panel">
-                <h2>AI Suggestions</h2>
-                <textarea placeholder="Corrected text and feedback will appear here..." disabled></textarea>
+                <div class="panel-header">
+                    <h2>✨ AI Suggestions</h2>
+                    <div class="panel-info">
+                        <span class="ai-status">Ready</span>
+                    </div>
+                </div>
+                <div class="textarea-container">
+                    <textarea id="aiSuggestions" placeholder="AI-enhanced content and suggestions will appear here..."
+                        disabled></textarea>
+                    <div class="textarea-overlay">
+                        <div class="ai-prompt">
+                            <div class="ai-icon">🤖</div>
+                            <p>AI suggestions will appear after analysis</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -64,9 +102,9 @@
         </section>
     </main>
 
-    <footer>
+    <!-- <footer>
         <p>Built with love for TechWriters · &copy; 2025 <a href="https://github.com/rookiedev25">rookiedev25</a></p>
-    </footer>
+    </footer> -->
 
     <script src="script.js"></script>
 </body>
